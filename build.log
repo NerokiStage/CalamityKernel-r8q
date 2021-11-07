@@ -1,4 +1,4 @@
-Script started on 2025-08-31 21:03:41-03:00 [COMMAND="./caly.sh" TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="120" LINES="30"]
+Script started on 2025-09-01 13:20:58-03:00 [COMMAND="./caly.sh" TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="120" LINES="30"]
 [H[2J[3J[1;35m=======================================================[0m
 [1;35m  ~|~  R I T U A L   D E   C A L A M I D A D E  ~|~   [0m
 [1;35m=======================================================[0m
@@ -13,7 +13,7 @@ Script started on 2025-08-31 21:03:41-03:00 [COMMAND="./caly.sh" TERM="xterm-256
 [1;33m==============================================[0m
  - Sua ordem: 
 [1;33m>>> Insira o codinome para esta Manifestação de Calamidade:[0m
- - Nome do Artefato: ohcaraioviu
+ - Nome do Artefato: ultimotesten antesdecomii ttar
 [1;32m>>> Decifrando os Símbolos de Configuração...[0m
 make[1]: Entering directory '/home/neroki/CalamityKernel-r8q/out'
   GEN     ./Makefile
@@ -51,35 +51,32 @@ drivers/samsung/debug/Kconfig:4:warning: ignoring type redefinition of 'SEC_DEBU
   CHK     include/generated/compile.h
   GZIP    kernel/config_data.gz
   CHK     kernel/kheaders_data.tar.xz
-  DTC     arch/arm64/boot/dts/samsung/r8q/../../vendor/qcom/kona.dtb
-  DTC     arch/arm64/boot/dts/samsung/r8q/../../vendor/qcom/kona-v2.dtb
-  DTC     arch/arm64/boot/dts/samsung/r8q/../../vendor/qcom/kona-v2.1.dtb
+  CC      techpack/display/rotator/sde_rotator_io_util.o
+  CC      techpack/display/msm/sde_io_util.o
+[1m../techpack/display/rotator/sde_rotator_io_util.c:17:6: [0m[0;1;31merror: [0m[1munused variable 'in_val' [-Werror,-Wunused-variable][0m
+        u32 in_val;
+[0;1;32m            ^
+[0m[1m../techpack/display/msm/sde_io_util.c:17:6: [0m[0;1;31merror: [0m[1munused variable 'in_val' [-Werror,-Wunused-variable][0m
+        u32 in_val;
+[0;1;32m            ^
+[0m1 error generated.
+1 errormake[4]: *** [../scripts/Makefile.build:338: techpack/display/rotator/sde_rotator_io_util.o] Error 1
+ generated.
+make[3]: *** [../scripts/Makefile.build:642: techpack/display/rotator] Error 2
+make[3]: *** Waiting for unfinished jobs....
+make[4]: *** [../scripts/Makefile.build:338: techpack/display/msm/sde_io_util.o] Error 1
+make[3]: *** [../scripts/Makefile.build:642: techpack/display/msm] Error 2
+make[2]: *** [../scripts/Makefile.build:642: techpack/display] Error 2
+make[2]: *** Waiting for unfinished jobs....
+make[1]: *** [/home/neroki/CalamityKernel-r8q/Makefile:1212: techpack] Error 2
+make[1]: *** Waiting for unfinished jobs....
 -- KernelSU version: 12998
 -- KernelSU: Manually-patched hook.
 -- KernelSU Manager signature size: 0x033b
 -- KernelSU Manager signature hash: c371061b19d8c7d7d6133c6a9bafe198fa944e50c1b31c9d8daa8d7f1fc2d2d6
 -- Supported Unofficial Manager: rsuntk (Non-GKI), 5ec1cff (GKI)
-  DTC     arch/arm64/boot/dts/samsung/r8q/kona-sec-r8q-eur-overlay-r00.dtbo
-  DTC     arch/arm64/boot/dts/samsung/r8q/kona-sec-r8q-eur-overlay-r01.dtbo
-  DTC     arch/arm64/boot/dts/samsung/r8q/kona-sec-r8q-eur-overlay-r02.dtbo
-  DTC     arch/arm64/boot/dts/samsung/r8q/kona-sec-r8q-eur-overlay-r03.dtbo
-  DTC     arch/arm64/boot/dts/samsung/r8q/kona-sec-r8q-eur-overlay-r04.dtbo
-  DTC     arch/arm64/boot/dts/samsung/r8q/kona-sec-r8q-eur-overlay-r05.dtbo
-  DTC     arch/arm64/boot/dts/samsung/r8q/kona-sec-r8q-eur-overlay-r06.dtbo
-  DTC     arch/arm64/boot/dts/samsung/r8q/kona-sec-r8q-eur-overlay-r07.dtbo
-  DTC     arch/arm64/boot/dts/samsung/r8q/kona-sec-r8q-eur-overlay-r08.dtbo
-  DTC     arch/arm64/boot/dts/samsung/r8q/kona-sec-r8q-eur-overlay-r09.dtbo
-  DTC     arch/arm64/boot/dts/samsung/r8q/kona-sec-r8q-eur-overlay-r10.dtbo
-  DTBOIMG arch/arm64/boot/dtbo.img
-echo -n 'UNCOMPRESSED_IMG' > arch/arm64/boot/Image-dtb-hdr && \
-true >> arch/arm64/boot/Image-dtb-hdr
-  DTC     arch/arm64/boot/dts/vendor/qcom/kona.dtb
-  DTC     arch/arm64/boot/dts/vendor/qcom/kona-v2.dtb
-  DTC     arch/arm64/boot/dts/vendor/qcom/kona-v2.1.dtb
-  Building modules, stage 2.
-  MODPOST 0 modules
-  CAT     arch/arm64/boot/Image-dtb
 make[1]: Leaving directory '/home/neroki/CalamityKernel-r8q/out'
+make: *** [Makefile:153: sub-make] Error 2
 [1;32m>>> O Símbolo foi manifestado! Selando a energia no Receptáculo...[0m
   adding: anykernel.sh (deflated 57%)
   adding: dtb (deflated 83%)
@@ -102,7 +99,7 @@ make[1]: Leaving directory '/home/neroki/CalamityKernel-r8q/out'
   adding: tools/fec (deflated 40%)
   adding: tools/magiskpolicy (deflated 42%)
   adding: tools/ak3-core.sh (deflated 74%)
-  adding: tools/busybox	 (deflated 39%)
+  adding: tools/busybox (deflated 39%)
   adding: tools/httools_static (deflated 38%)
   adding: tools/snapshotupdater_static (deflated 43%)
   adding: README.md (deflated 61%)
@@ -114,8 +111,8 @@ make[1]: Leaving directory '/home/neroki/CalamityKernel-r8q/out'
   adding: modules/system/lib/modules/placeholder (stored 0%)
 [1;32m=======================================================[0m
 [1;32m     RITUAL CONCLUÍDO. A REALIDADE FOI ALTERADA.     [0m
-[1;32m  Artefato: [1;36mAnyKernel3/ohcaraioviu.zip[0m
+[1;32m  Artefato: [1;36mAnyKernel3/ultimotesteantesdecomittar.zip[0m
 [1;32m=======================================================[0m
-[1;33m>>> O Ritual de Calamidade durou: 0 minuto(s) e 33 segundos de distorção temporal.[0m
+[1;33m>>> O Ritual de Calamidade durou: 0 minuto(s) e 31 segundos de distorção temporal.[0m
 
-Script done on 2025-08-31 21:04:20-03:00 [COMMAND_EXIT_CODE="0"]
+Script done on 2025-09-01 13:21:38-03:00 [COMMAND_EXIT_CODE="0"]
