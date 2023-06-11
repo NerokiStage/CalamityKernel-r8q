@@ -1139,7 +1139,6 @@ static irqreturn_t msm_irq(int irq, void *arg)
 	struct drm_device *dev = arg;
 	struct msm_drm_private *priv = dev->dev_private;
 	struct msm_kms *kms = priv->kms;
-	BUG_ON(!kms);
 	return kms->funcs->irq(kms);
 }
 
@@ -1147,7 +1146,6 @@ static void msm_irq_preinstall(struct drm_device *dev)
 {
 	struct msm_drm_private *priv = dev->dev_private;
 	struct msm_kms *kms = priv->kms;
-	BUG_ON(!kms);
 	kms->funcs->irq_preinstall(kms);
 }
 
@@ -1155,7 +1153,6 @@ static int msm_irq_postinstall(struct drm_device *dev)
 {
 	struct msm_drm_private *priv = dev->dev_private;
 	struct msm_kms *kms = priv->kms;
-	BUG_ON(!kms);
 	return kms->funcs->irq_postinstall(kms);
 }
 
@@ -1163,7 +1160,6 @@ static void msm_irq_uninstall(struct drm_device *dev)
 {
 	struct msm_drm_private *priv = dev->dev_private;
 	struct msm_kms *kms = priv->kms;
-	BUG_ON(!kms);
 	kms->funcs->irq_uninstall(kms);
 }
 
