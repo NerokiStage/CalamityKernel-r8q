@@ -1,6 +1,6 @@
 #!/bin/bash
 
-LLVM_PATH="/home/neroki/tc/clang/bin/"
+LLVM_PATH="/home/ubuntu/tc/clang/bin/"
 
 read -p "Digite um nome para o kernel: " KERNEL_NAME
 
@@ -9,7 +9,7 @@ if [ -z "$KERNEL_NAME" ]; then
     exit 1
 fi
 
-TC_PATH="/home/neroki/tc/clang/bin/"
+TC_PATH="/home/ubuntu/tc/clang/bin/"
 GCC_PATH="/usr/bin/"
 
 BUILD_ENV="CC=${TC_PATH}clang CROSS_COMPILE=${GCC_PATH}aarch64-linux-gnu- LLVM=1 LLVM_IAS=1 PATH=$LLVM_PATH:$LLD_PATH:$PATH"  
