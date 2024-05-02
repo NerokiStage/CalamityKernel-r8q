@@ -1,6 +1,6 @@
 #!/bin/bash
 
-LLVM_PATH="$HOME/clang-r510928/bin/"
+LLVM_PATH="/home/ubuntu/tc/clang/bin/"
 
 read -p "Digite um nome para o kernel: " KERNEL_NAME
 
@@ -9,7 +9,20 @@ if [ -z "$KERNEL_NAME" ]; then
     exit 1
 fi
 
-TC_PATH="$HOME/clang-r510928/bin/"
+read -p "Digite 1 para Beta ou 2 para Stable: " VERSION_OPTION
+
+if [ "$VERSION_OPTION" != "1" ] && [ "$VERSION_OPTION" != "2" ]; then
+    echo "Opção inválida. Saindo."
+    exit 1
+fi
+
+if [ "$VERSION_OPTION" == "1" ]; then
+    VERSION="Beta"
+else
+    VERSION="Stable"
+fi
+
+TC_PATH="/home/ubuntu/tc/clang/bin/"
 GCC_PATH="/usr/bin/"
 
 BUILD_ENV="CC=${TC_PATH}clang CROSS_COMPILE=${GCC_PATH}aarch64-linux-gnu- LLVM=1 LLVM_IAS=1 PATH=$LLVM_PATH:$LLD_PATH:$PATH"  
@@ -36,5 +49,4 @@ echo "Tempo de compilação: $(($DIFF / 60)) minutos(s) and $(($DIFF % 60)) segu
 cp $IMAGE AnyKernel3/Image.gz
 cd AnyKernel3
 rm *.zip
-zip -r9 ${KERNEL_NAME}-.zip .
-
+zip -r9 "${VERSION}-${KERNEL_NAME}-$(date +"%d-%m-%Y").zip" .
