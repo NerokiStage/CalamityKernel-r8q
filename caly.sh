@@ -49,4 +49,4 @@ echo "Tempo de compilação: $(($DIFF / 60)) minutos(s) and $(($DIFF % 60)) segu
 cp $IMAGE AnyKernel3/Image.gz
 cd AnyKernel3
 rm *.zip
-zip -r9 "${VERSION}-${KERNEL_NAME}-$(date +"%d-%m-%Y").zip" .
+zip -r9 "${VERSION}-${KERNEL_NAME}.zip" .
