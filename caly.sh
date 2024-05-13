@@ -1,18 +1,27 @@
 #!/bin/bash
 
+# Define colors
+GREEN="\e[1;32m"
+RED="\e[1;31m"
+YELLOW="\e[1;33m"
+MUSTARD="\e[1;33m"
+DEFAULT="\e[0m"
+
 LLVM_PATH="/home/ubuntu/tc/clang/bin/"
 
-read -p "Digite um nome para o kernel: " KERNEL_NAME
+echo -e "${YELLOW}Digite um nome para o kernel: ${DEFAULT}"
+read KERNEL_NAME
 
 if [ -z "$KERNEL_NAME" ]; then
-    echo "Nome do kernel não pode ser vazio. Saindo."
+    echo -e "${RED}Nome do kernel não pode ser vazio. Saindo.${DEFAULT}"
     exit 1
 fi
 
-read -p "Digite 1 para Beta ou 2 para Stable: " VERSION_OPTION
+echo -e "${YELLOW}Digite 1 para Beta ou 2 para Stable: ${DEFAULT}"
+read VERSION_OPTION
 
 if [ "$VERSION_OPTION" != "1" ] && [ "$VERSION_OPTION" != "2" ]; then
-    echo "Opção inválida. Saindo."
+    echo -e "${RED}Opção inválida. Saindo.${DEFAULT}"
     exit 1
 fi
 
@@ -33,6 +42,10 @@ make O=out ARCH=arm64 $BUILD_ENV r8q_defconfig
 
 DATE_START=$(date +"%s")
 
+echo -e "${MUSTARD}***********************************************${DEFAULT}"
+echo -e "${MUSTARD}          Compiling CalamityKernel                ${DEFAULT}"
+echo -e "${MUSTARD}***********************************************${DEFAULT}"
+
 make -j$(nproc --all) O=out ARCH=arm64 $KERNEL_MAKE_ENV $BUILD_ENV Image.gz
 
 make -j$(nproc --all) O=out ARCH=arm64 $KERNEL_MAKE_ENV $BUILD_ENV dtbs
@@ -44,9 +57,19 @@ cat $DTB_OUT/*.dtb > AnyKernel3/dtb
 
 DATE_END=$(date +"%s")
 DIFF=$(($DATE_END - $DATE_START))
-echo "Tempo de compilação: $(($DIFF / 60)) minutos(s) and $(($DIFF % 60)) segundos."
+echo -e "${GREEN}Tempo de compilação: $(($DIFF / 60)) minutos(s) and $(($DIFF % 60)) segundos.${DEFAULT}"
+
+echo -e "${MUSTARD}***********************************************${DEFAULT}"
+echo -e "${MUSTARD}                Zipping Kernel                 ${DEFAULT}"
+echo -e "${MUSTARD}***********************************************${DEFAULT}"
 
 cp $IMAGE AnyKernel3/Image.gz
 cd AnyKernel3
 rm *.zip
-zip -r9 "${VERSION}-${KERNEL_NAME}.zip" .
+zip -r9 "${YELLOW}${VERSION}-${KERNEL_NAME}.zip" .
+
+echo -e "${MUSTARD}***********************************************${DEFAULT}"
+echo -e "${MUSTARD}                 Cleaning up                   ${DEFAULT}"
+echo -e "${MUSTARD}***********************************************${DEFAULT}"
+
+cd ../
