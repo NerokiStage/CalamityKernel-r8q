@@ -968,7 +968,7 @@
 		reg-names = "base", "global_base";
 		interrupts = <GIC_SPI 581 IRQ_TYPE_LEVEL_HIGH>;
 		qcom,mport = <0>;
-		qcom,hw-timer-hz = <21200000>;
+		qcom,hw-timer-hz = <19200000>;
 		qcom,target-dev = <&cpu_cpu_llcc_bw>;
 		qcom,count-unit = <0x10000>;
 	};
@@ -987,7 +987,7 @@
 		reg = <0x9091000 0x1000>;
 		reg-names = "base";
 		interrupts = <GIC_SPI 81 IRQ_TYPE_LEVEL_HIGH>;
-		qcom,hw-timer-hz = <21200000>;
+		qcom,hw-timer-hz = <19200000>;
 		qcom,target-dev = <&cpu_llcc_ddr_bw>;
 		qcom,count-unit = <0x10000>;
 	};
@@ -1011,7 +1011,7 @@
 		qcom,bwmon_clks = "npu_bwmon_ahb", "npu_bwmon_axi";
 		interrupts = <GIC_SPI 476 IRQ_TYPE_LEVEL_HIGH>;
 		qcom,mport = <0>;
-		qcom,hw-timer-hz = <21200000>;
+		qcom,hw-timer-hz = <19200000>;
 		qcom,target-dev = <&npu_npu_llcc_bw>;
 		qcom,count-unit = <0x10000>;
 	};
@@ -1028,7 +1028,7 @@
 		reg = <0x9093000 0x1000>;
 		reg-names = "base";
 		interrupts = <GIC_SPI 81 IRQ_TYPE_LEVEL_HIGH>;
-		qcom,hw-timer-hz = <21200000>;
+		qcom,hw-timer-hz = <19200000>;
 		qcom,target-dev = <&npu_llcc_ddr_bw>;
 		qcom,count-unit = <0x10000>;
 	};
@@ -1052,7 +1052,7 @@
 		qcom,bwmon_clks = "npu_bwmon_ahb", "npu_bwmon_axi";
 		interrupts = <GIC_SPI 155 IRQ_TYPE_LEVEL_HIGH>;
 		qcom,mport = <0>;
-		qcom,hw-timer-hz = <21200000>;
+		qcom,hw-timer-hz = <19200000>;
 		qcom,target-dev = <&npudsp_npu_ddr_bw>;
 		qcom,count-unit = <0x10000>;
 	};
