@@ -354,7 +354,7 @@ static int tz_init(struct devfreq_msm_adreno_tz_data *priv,
 	return ret;
 }
 
-extern int adreno_idler(struct devfreq_dev_status stats, struct devfreq *devfreq,
+extern int adreno_idler(struct devfreq_dev_status *stats, struct devfreq *devfreq,
 		 unsigned long *freq);
 		 
 static inline int devfreq_get_freq_level(struct devfreq *devfreq,
