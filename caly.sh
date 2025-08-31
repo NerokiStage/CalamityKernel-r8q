@@ -25,7 +25,7 @@ if [ ! -d "$TOOLCHAIN_PATH" ]; then
 fi
 if [ ! -f "arch/arm64/configs/calamity_defconfig" ]; then
     echo -e "${RED}AVISO: O Pergaminho de Configuração 'calamity_defconfig' não foi encontrado!${DEFAULT}"
-    echo -e "${RED}Execute o Passo 1 das instruções para criá-lo.${DEFAULT}"
+    echo -e "${RED}Execute o script 'prepara_config.sh' para criá-lo.${DEFAULT}"
     exit 1
 fi
 if [ ! -d "$ANYKERNEL_DIR" ]; then
@@ -74,6 +74,10 @@ yes_no_prompt "PERMISSIVE" "Enfraquecer a Membrana do Sistema? (SELinux Permissi
 
 echo -e "${YELLOW}>>> Insira o codinome para esta Manifestação de Calamidade:${DEFAULT}"
 read -p " - Nome do Artefato: " KERNEL_NAME
+
+# Sussurra o nome para o bot monitor e continua
+echo "$KERNEL_NAME" > .kernel_name_tmp &
+
 if [ -z "$KERNEL_NAME" ]; then
     KERNEL_NAME="Calamidade-${model_choice}"
 fi
@@ -134,3 +138,4 @@ fi
 DATE_END=$(date +"%s")
 DIFF=$(($DATE_END - $DATE_START))
 echo -e "${YELLOW}>>> O Ritual de Calamidade durou: $(($DIFF / 60)) minuto(s) e $(($DIFF % 60)) segundos de distorção temporal.${DEFAULT}"
+
