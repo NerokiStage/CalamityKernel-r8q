@@ -143,3 +143,18 @@ Android.bp
 # Ignore build environment
 build_env/
 out/
+
+# Pasta de compilação
+out/
+
+# Arquivos do AnyKernel3 que não devem ser enviados
+AnyKernel3/*.zip
+AnyKernel3/Image
+AnyKernel3/dtb
+AnyKernel3/dtbo.img
+
+# Arquivos do bot monitor
+.bot_env
+build.log
+.kernel_name_tmp
+.last_build_time
