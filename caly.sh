@@ -1,10 +1,11 @@
 #!/bin/bash
 
-# --- PARÂMETROS DO AMBIENTE COM PROTON CLANG (PÓS-CIRURGIA) ---
 TOOLCHAIN_PATH="/home/neroki/proton-clang"
 ANYKERNEL_DIR="AnyKernel3"
 
-# Cores e Símbolos
+export USE_CCACHE=1
+export CCACHE_EXEC=/usr/bin/ccache
+
 GREEN="\e[1;32m"
 RED="\e[1;31m"
 YELLOW="\e[1;33m"
@@ -18,7 +19,6 @@ echo -e "${PURPLE}  ~|~  R I T U A L   D E   C A L A M I D A D E  ~|~   ${DEFAUL
 echo -e "${PURPLE}=======================================================${DEFAULT}"
 echo ""
 
-# Verificações
 if [ ! -d "$TOOLCHAIN_PATH" ]; then
     echo -e "${RED}AVISO: A ferramenta unificada (Proton Clang) não foi encontrada em: ${TOOLCHAIN_PATH}${DEFAULT}"
     exit 1
@@ -33,7 +33,6 @@ if [ ! -d "$ANYKERNEL_DIR" ]; then
     exit 1
 fi
 
-# Exportando variáveis de ambiente
 export ARCH=arm64
 export KBUILD_BUILD_USER="Ordo Realitas"
 export KBUILD_BUILD_HOST="Agente de Campo"
@@ -82,8 +81,6 @@ fi
 DATE_START=$(date +"%s")
 
 CONFIG_FILES="calamity_defconfig"
-# --- MUDANÇA FINAL ABAIXO ---
-# Adicionamos KCFLAGS="-fno-integrated-as" para forçar o uso do montador GNU em códigos problemáticos (como o vdso32)
 BUILD_ENV="O=out LLVM=1 LLVM_IAS=1 KCFLAGS=-fno-integrated-as"
 
 if [ "$PERMISSIVE" = true ]; then
@@ -91,8 +88,6 @@ if [ "$PERMISSIVE" = true ]; then
     echo "CONFIG_SECURITY_SELINUX_PERMISSIVE=y" >> arch/arm64/configs/$CONFIG_FILES
     echo -e "${CYAN}>>> A Membrana do Sistema será afinada. Defesas reduzidas.${DEFAULT}"
 fi
-
-make ${BUILD_ENV} mrproper
 
 echo -e "${GREEN}>>> Decifrando os Símbolos de Configuração...${DEFAULT}"
 make ${BUILD_ENV} ${CONFIG_FILES}
