@@ -1,4 +1,4 @@
-Script started on 2025-08-31 20:39:11-03:00 [COMMAND="./caly.sh" TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="120" LINES="30"]
+Script started on 2025-08-31 21:03:41-03:00 [COMMAND="./caly.sh" TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="120" LINES="30"]
 [H[2J[3J[1;35m=======================================================[0m
 [1;35m  ~|~  R I T U A L   D E   C A L A M I D A D E  ~|~   [0m
 [1;35m=======================================================[0m
@@ -11,5 +11,111 @@ Script started on 2025-08-31 20:39:11-03:00 [COMMAND="./caly.sh" TERM="xterm-256
 [1;32mConfirmar[0m
 [1;32mNegar (padrão)[0m
 [1;33m==============================================[0m
- - Sua ordem: ^C
-Script done on 2025-08-31 20:39:18-03:00 [COMMAND_EXIT_CODE="130"]
+ - Sua ordem: 
+[1;33m>>> Insira o codinome para esta Manifestação de Calamidade:[0m
+ - Nome do Artefato: ohcaraioviu
+[1;32m>>> Decifrando os Símbolos de Configuração...[0m
+make[1]: Entering directory '/home/neroki/CalamityKernel-r8q/out'
+  GEN     ./Makefile
+drivers/leds/Kconfig:815:warning: ignoring type redefinition of 'LEDS_KTD2692' from 'tristate' to 'bool'
+drivers/samsung/debug/Kconfig:4:warning: ignoring type redefinition of 'SEC_DEBUG' from 'bool' to 'tristate'
+#
+# configuration written to .config
+#
+make[1]: Leaving directory '/home/neroki/CalamityKernel-r8q/out'
+make[1]: Entering directory '/home/neroki/CalamityKernel-r8q/out'
+  GEN     ./Makefile
+scripts/kconfig/conf  --olddefconfig Kconfig
+drivers/leds/Kconfig:815:warning: ignoring type redefinition of 'LEDS_KTD2692' from 'tristate' to 'bool'
+drivers/samsung/debug/Kconfig:4:warning: ignoring type redefinition of 'SEC_DEBUG' from 'bool' to 'tristate'
+#
+# configuration written to .config
+#
+make[1]: Leaving directory '/home/neroki/CalamityKernel-r8q/out'
+[1;35m=======================================================[0m
+[1;35m    INICIANDO O RITUAL DE MANIFESTAÇÃO... CUIDADO.    [0m
+[1;35m=======================================================[0m
+make[1]: Entering directory '/home/neroki/CalamityKernel-r8q/out'
+  GEN     ./Makefile
+scripts/kconfig/conf  --syncconfig Kconfig
+drivers/leds/Kconfig:815:warning: ignoring type redefinition of 'LEDS_KTD2692' from 'tristate' to 'bool'
+drivers/samsung/debug/Kconfig:4:warning: ignoring type redefinition of 'SEC_DEBUG' from 'bool' to 'tristate'
+  GEN     ./Makefile
+-- KernelSU version: 12998
+-- KernelSU: Manually-patched hook.
+-- KernelSU Manager signature size: 0x033b
+-- KernelSU Manager signature hash: c371061b19d8c7d7d6133c6a9bafe198fa944e50c1b31c9d8daa8d7f1fc2d2d6
+-- Supported Unofficial Manager: rsuntk (Non-GKI), 5ec1cff (GKI)
+  Using .. as source for kernel
+  CALL    ../scripts/checksyscalls.sh
+  CHK     include/generated/compile.h
+  GZIP    kernel/config_data.gz
+  CHK     kernel/kheaders_data.tar.xz
+  DTC     arch/arm64/boot/dts/samsung/r8q/../../vendor/qcom/kona.dtb
+  DTC     arch/arm64/boot/dts/samsung/r8q/../../vendor/qcom/kona-v2.dtb
+  DTC     arch/arm64/boot/dts/samsung/r8q/../../vendor/qcom/kona-v2.1.dtb
+-- KernelSU version: 12998
+-- KernelSU: Manually-patched hook.
+-- KernelSU Manager signature size: 0x033b
+-- KernelSU Manager signature hash: c371061b19d8c7d7d6133c6a9bafe198fa944e50c1b31c9d8daa8d7f1fc2d2d6
+-- Supported Unofficial Manager: rsuntk (Non-GKI), 5ec1cff (GKI)
+  DTC     arch/arm64/boot/dts/samsung/r8q/kona-sec-r8q-eur-overlay-r00.dtbo
+  DTC     arch/arm64/boot/dts/samsung/r8q/kona-sec-r8q-eur-overlay-r01.dtbo
+  DTC     arch/arm64/boot/dts/samsung/r8q/kona-sec-r8q-eur-overlay-r02.dtbo
+  DTC     arch/arm64/boot/dts/samsung/r8q/kona-sec-r8q-eur-overlay-r03.dtbo
+  DTC     arch/arm64/boot/dts/samsung/r8q/kona-sec-r8q-eur-overlay-r04.dtbo
+  DTC     arch/arm64/boot/dts/samsung/r8q/kona-sec-r8q-eur-overlay-r05.dtbo
+  DTC     arch/arm64/boot/dts/samsung/r8q/kona-sec-r8q-eur-overlay-r06.dtbo
+  DTC     arch/arm64/boot/dts/samsung/r8q/kona-sec-r8q-eur-overlay-r07.dtbo
+  DTC     arch/arm64/boot/dts/samsung/r8q/kona-sec-r8q-eur-overlay-r08.dtbo
+  DTC     arch/arm64/boot/dts/samsung/r8q/kona-sec-r8q-eur-overlay-r09.dtbo
+  DTC     arch/arm64/boot/dts/samsung/r8q/kona-sec-r8q-eur-overlay-r10.dtbo
+  DTBOIMG arch/arm64/boot/dtbo.img
+echo -n 'UNCOMPRESSED_IMG' > arch/arm64/boot/Image-dtb-hdr && \
+true >> arch/arm64/boot/Image-dtb-hdr
+  DTC     arch/arm64/boot/dts/vendor/qcom/kona.dtb
+  DTC     arch/arm64/boot/dts/vendor/qcom/kona-v2.dtb
+  DTC     arch/arm64/boot/dts/vendor/qcom/kona-v2.1.dtb
+  Building modules, stage 2.
+  MODPOST 0 modules
+  CAT     arch/arm64/boot/Image-dtb
+make[1]: Leaving directory '/home/neroki/CalamityKernel-r8q/out'
+[1;32m>>> O Símbolo foi manifestado! Selando a energia no Receptáculo...[0m
+  adding: anykernel.sh (deflated 57%)
+  adding: dtb (deflated 83%)
+  adding: Image (deflated 54%)
+  adding: LICENSE (deflated 73%)
+  adding: dtbo.img (deflated 82%)
+  adding: patch/ (stored 0%)
+  adding: patch/placeholder (stored 0%)
+  adding: ramdisk/ (stored 0%)
+  adding: ramdisk/placeholder (stored 0%)
+  adding: META-INF/ (stored 0%)
+  adding: META-INF/com/ (stored 0%)
+  adding: META-INF/com/google/ (stored 0%)
+  adding: META-INF/com/google/android/ (stored 0%)
+  adding: META-INF/com/google/android/updater-script (deflated 1%)
+  adding: META-INF/com/google/android/update-binary (deflated 72%)
+  adding: tools/ (stored 0%)
+  adding: tools/magiskboot (deflated 33%)
+  adding: tools/lptools_static (deflated 38%)
+  adding: tools/fec (deflated 40%)
+  adding: tools/magiskpolicy (deflated 42%)
+  adding: tools/ak3-core.sh (deflated 74%)
+  adding: tools/busybox	 (deflated 39%)
+  adding: tools/httools_static (deflated 38%)
+  adding: tools/snapshotupdater_static (deflated 43%)
+  adding: README.md (deflated 61%)
+  adding: banner (deflated 57%)
+  adding: modules/ (stored 0%)
+  adding: modules/system/ (stored 0%)
+  adding: modules/system/lib/ (stored 0%)
+  adding: modules/system/lib/modules/ (stored 0%)
+  adding: modules/system/lib/modules/placeholder (stored 0%)
+[1;32m=======================================================[0m
+[1;32m     RITUAL CONCLUÍDO. A REALIDADE FOI ALTERADA.     [0m
+[1;32m  Artefato: [1;36mAnyKernel3/ohcaraioviu.zip[0m
+[1;32m=======================================================[0m
+[1;33m>>> O Ritual de Calamidade durou: 0 minuto(s) e 33 segundos de distorção temporal.[0m
+
+Script done on 2025-08-31 21:04:20-03:00 [COMMAND_EXIT_CODE="0"]
