@@ -159,3 +159,4 @@ build.log
 .kernel_name_tmp
 .last_build_time
 KernelSU-Next/
+build.log
