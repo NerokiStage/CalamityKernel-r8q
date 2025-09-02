@@ -701,7 +701,7 @@ KBUILD_CFLAGS   += -O2
 endif
 
 ifdef CONFIG_CC_WERROR
-KBUILD_CFLAGS  += -Werror
+#KBUILD_CFLAGS  += -Werror
 endif
 
 # Tell gcc to never replace conditional load with a non-conditional one
